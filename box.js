@@ -10,6 +10,9 @@
 | @copyright  Copyright 2011 James Brumond
 | @license    Dual licensed under MIT and GPL
 |
+| Original concept based on the work of Marcus Westin in store.js
+| @link       https://github.com/marcuswestin/store.js
+|
 */
 
 window.Box = (new (function(window, undefined) {
