@@ -1,18 +1,15 @@
-h1. Box.js
+# Box.js
 
-Author: James Brumond
-Version: 0.1.1-dev
+LocalStorage wrapper with support for various serialization formats.
 
-Copyright 2011 James Brumond
-Dual licensed under MIT and GPL
+## What is Box.js?
 
-h2. What is Box.js?
+Box.js is a cross-browser storage library using localStorage as well as fallbacks for other browsers. It has a simple, easy-to-use API but comes with a lot of power including the ability to dump the current localStorage state in multiple different formats.
 
-Box.js is a cross-browser storage library using localStorage as well as fallbacks for other browsers. It has a simple, easy-to-use API but comes with a lot of power.
+## Examples
 
-h2. Examples
-
-<pre><code>// First, make sure its supported in this browser
+```javascript
+// First, make sure its supported in this browser
 if (Box.supported()) {
 
     // Write a value
@@ -36,7 +33,7 @@ if (Box.supported()) {
     // Use PHP? Also get it in PHP serialized format
     var phpDump = Box.dumps('serialize');
     
-    // Coming soon... Python pickle format
+    // We can do Python pickle format, too
     var pythonDump = Box.dumps('pickle');
 
     // It goes the other way, too; load in some JSON values
@@ -48,4 +45,5 @@ if (Box.supported()) {
     // But we can also get them all at once
     Box.empty();
     
-}</code></pre>
+}
+```
