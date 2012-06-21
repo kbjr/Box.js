@@ -334,15 +334,6 @@ window.Box = (new (function(window, undefined) {
 			}
 		};
 
-		// Actually attempt to read and write data
-		try {
-			self.store('TestName', 'TestValue');
-			if (self.fetch('TestName') !== 'TestValue') {
-				support = false;
-			}
-			self.unset('TestName');
-		} catch (e) { support = false; }
-
 	}
 
 // ----------------------------------------------------------------------------
@@ -1497,6 +1488,17 @@ window.Box = (new (function(window, undefined) {
 			}
 		};
 	}());
+
+// ----------------------------------------------------------------------------
+//  Actually attempt to read and write data
+
+	try {
+		self.store('TestName', 'TestValue');
+		if (self.fetch('TestName') !== 'TestValue') {
+			support = false;
+		}
+		self.unset('TestName');
+	} catch (e) { support = false; }
 	
 })(window));
 
